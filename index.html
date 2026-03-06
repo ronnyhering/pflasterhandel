@@ -1,1 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pflasterhandel</title>
+  <meta name="description" content="Pflasterhandel – Pflastersteine, Beratung und Lieferung" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">Pflasterhandel</a>
+      <nav class="main-nav" id="nav">
+        <a href="#home">Start</a>
+        <a href="#products">Produkte</a>
+        <a href="#about">Über uns</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <button class="nav-toggle" aria-controls="nav" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Pflasterhandel – Qualität für Außenbereiche</h1>
+        <p>Hochwertige Pflastersteine, kompetente Beratung und zuverlässige Lieferung.</p>
+      </div>
+    </section>
+
+    <section id="products" class="container section">
+      <h2>Unsere Produkte</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/images/pflaster1.jpg" alt="Pflasterstein Beispiel" />
+          <h3>Betonpflaster</h3>
+          <p>Robust, frostbeständig, in vielen Farben.</p>
+        </article>
+        <article class="card">
+          <img src="assets/images/pflaster2.jpg" alt="Pflasterstein Beispiel" />
+          <h3>Klinkerpflaster</h3>
+          <p>Klassisch, langlebig, edle Optik.</p>
+        </article>
+        <article class="card">
+          <img src="assets/images/pflaster3.jpg" alt="Pflasterstein Beispiel" />
+          <h3>Naturstein</h3>
+          <p>Individuell, hochwertig, zeitlos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>Über uns</h2>
+      <p>Wir liefern Pflastersteine für private und gewerbliche Projekte. Beratung und Musterlieferung möglich.</p>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Kontakt</h2>
+      <p>Telefon: <strong>0123 456789</strong></p>
+      <p>E‑Mail: <strong>info@pflasterhandel.de</strong></p>
+
+      <!-- Beispiel Kontaktformular mit Formspree -->
+      <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          E‑Mail
+          <input type="email" name="_replyto" required />
+        </label>
+        <label>
+          Nachricht
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Nachricht senden</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Pflasterhandel. <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Jahr automatisch setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Nav Toggle
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('nav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+      btn.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
 
